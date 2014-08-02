@@ -73,7 +73,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
      */
     public function it_passes_validation()
     {
-        $validator = m::mock(ValidatorInterface::class);
+        $validator = m::mock('Coinon\Validation\ValidatorInterface');
         $validator->shouldReceive('fails')->once()->andReturn(false);
         $validator->shouldReceive('errors')->never();
         $this->validatorFactory
@@ -95,7 +95,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
     public function it_returns_errors_on_failed_validation()
     {
         $errors = ['attribute' => 'Attribute is missing'];
-        $validator = m::mock(ValidatorInterface::class);
+        $validator = m::mock('Coinon\Validation\ValidatorInterface');
         $validator->shouldReceive('fails')->once()->andReturn(true);
         $validator->shouldReceive('errors')->once()->andReturn($errors);
         $this->validatorFactory
