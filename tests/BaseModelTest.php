@@ -19,7 +19,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
 
     public function setUp()
     {
-        $this->validatorFactory = m::mock(FactoryInterface::class);
+        $this->validatorFactory = m::mock('Coinon\Validation\FactoryInterface');
         BaseModel::setValidatorFactory($this->validatorFactory);
     }
 
