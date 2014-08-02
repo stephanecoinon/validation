@@ -1,0 +1,26 @@
+{
+    "name": "stephanecoinon/validation",
+    "description": "Laravel Eloquent model with built-in validation",
+    "keywords": ["laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stephane Coinon",
+            "email": "me@stephanecoinon.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/database": "4.2.*",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coinon\\Validation\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "mockery/mockery": "dev-master@dev"
+    }
+}
